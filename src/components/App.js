@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import CurrencySelector from './CurrencySelector'
 import DisplayData from './DisplayData'
+import { AppContainer, Heading } from './StyledComponents'
 
 
 const App = () => {
@@ -10,7 +11,7 @@ const App = () => {
   const [currency, setCurrency] = useState(initialCurrency) 
   const [bitcoinData, setBitcoinData] = useState({})
   const url = "https://api.coindesk.com/v1/bpi/historical/close.json?currency="
-  
+
   useEffect( () => {
     console.log("Hi, I'm using useEfect")
     fetch(`${url}${currency}`)
@@ -28,11 +29,11 @@ const App = () => {
   }
 
   return (
-    <div >
-          <h1>Bitcoin Index</h1>
+    <AppContainer>
+          <Heading>Bitcoin Index</Heading>
           <CurrencySelector currency={currency} handleCurrency={handleCurrency}/>
           <DisplayData bitcoinData={bitcoinData}/>
-    </div>
+    </AppContainer>
   )
 }
 
