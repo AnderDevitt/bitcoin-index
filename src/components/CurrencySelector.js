@@ -1,15 +1,8 @@
 import currencies from '../data/supported-currencies.json'
-import React, {useState} from 'react'
 
-const CurrencySelector = () => {
-    // define state using hooks
-    const initialCurrency = "AUD"
-    const [currency, setCurrency] = useState(initialCurrency) 
 
-    const handleCurrency = (value) => {
-        console.log(value)
-        setCurrency(value)
-    }
+const CurrencySelector = ({currency, handleCurrency}) => {
+    
 
     return (
         <div>
