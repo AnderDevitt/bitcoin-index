@@ -1,9 +1,14 @@
 import React from 'react'
+import CurrencySelector from './CurrencySelector'
+import DisplayData from './DisplayData'
+
 
 const App = () => {
   return (
     <div >
-          The basic empty template
+          <h1>Bitcoin Index</h1>
+          <CurrencySelector />
+          <DisplayData />
     </div>
   )
 }
