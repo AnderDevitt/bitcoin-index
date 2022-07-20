@@ -4,6 +4,7 @@ import DisplayData from './DisplayData'
 
 
 const App = () => {
+  
   return (
     <div >
           <h1>Bitcoin Index</h1>
